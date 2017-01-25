@@ -201,7 +201,7 @@ class myList {
 	public int binarysearch(int start, int end, int element){
 		int pos = (start + end)/2;
 		item it = itens.get(pos);
-		if(it.value == element) return pos+1;
+		if(it.value == element) return pos;
 		if(start >= end){
 			return -1;
 		}
@@ -274,7 +274,7 @@ public class mainClass {
 			System.out.println("Could not find element on list");
 		} else {
 			item it = l.itens.get(pos);
-			System.out.format("Element found on position: %d\n", pos);
+			System.out.format("Element found on position: %d\n", pos+1);
 			System.out.format("Element: id[%d] value[%d]\n", it.id, it.value);
 		}
 	}
